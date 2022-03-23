@@ -14,7 +14,8 @@ object Playground {
         context.log.info(s"Just received: $message")
         Behaviors.same
       },
-      "DummySystem")
+      "DummySystem"
+    )
 
     root ! "Hey, Akka!"
 
