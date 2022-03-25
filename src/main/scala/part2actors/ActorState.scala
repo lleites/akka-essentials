@@ -1,8 +1,7 @@
 package part2actors
 
-import akka.actor.typed.ActorSystem
-import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
+import akka.actor.typed.{ActorSystem, Behavior}
 
 object ActorState extends App {
 
@@ -30,7 +29,7 @@ object ActorState extends App {
 
   }
 
-  def testBehaviorWordCounter(behavior: Behavior[String]) = {
+  def testBehaviorWordCounter(behavior: Behavior[String]): Unit = {
     val actorSystem = ActorSystem(behavior, "FirstActorSystem")
 
     actorSystem ! "Sun is shinning"
@@ -73,7 +72,7 @@ object ActorState extends App {
 
   }
 
-  def testBehaviorSimple(behavior: Behavior[SimpleThing]) = {
+  def testBehaviorSimple(behavior: Behavior[SimpleThing]): Unit = {
     val actorSystem = ActorSystem(behavior, "FirstActorSystem")
 
     actorSystem ! EatChocolate
